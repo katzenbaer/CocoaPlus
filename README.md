@@ -22,7 +22,7 @@ pod "CocoaPlus"
 
 ## Author
 
-tkatzenbaer, me@katzenbaer.net
+Terrence Katzenbaer, me@katzenbaer.net
 
 ## License
 
