@@ -40,5 +40,6 @@ class OPStyleConformingButton: UIButton, OPStyleConforming {
         self.backgroundColor = style.backgroundColor
         self.contentEdgeInsets = style.contentEdgeInsets
         self.imageView!.tintColor = style.ImageView.tintColor
+        self.setTitleColor(style.titleColor, forState: .Normal)
     }
 }

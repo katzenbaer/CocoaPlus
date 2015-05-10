@@ -6,40 +6,20 @@
 //  Copyright (c) 2014 tkatzenbaer. All rights reserved.
 //
 
-SpecBegin(InitialSpecs)
+#define RecordSnapshots NO
 
-describe(@"these will fail", ^{
+SpecBegin(OPCircleButtonViewController)
 
-    it(@"can do maths", ^{
-        expect(1).to.equal(2);
-    });
-
-    it(@"can read", ^{
-        expect(@"number").to.equal(@"string");
-    });
+it(@"loading view controller from storyboard", ^{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"CircleButton"];
+    expect(vc.view).willNot.beNil();
     
-    it(@"will wait for 10 seconds and fail", ^{
-        waitUntil(^(DoneCallback done) {
-        
-        });
-    });
-});
-
-describe(@"these will pass", ^{
-    
-    it(@"can do maths", ^{
-        expect(1).beLessThan(23);
-    });
-    
-    it(@"can read", ^{
-        expect(@"team").toNot.contain(@"I");
-    });
-    
-    it(@"will wait and succeed", ^{
-        waitUntil(^(DoneCallback done) {
-            done();
-        });
-    });
+    if (RecordSnapshots) {
+        expect(vc.view).to.recordSnapshotNamed(@"default");
+    } else {
+        expect(vc.view).will.haveValidSnapshotNamed(@"default");
+    }
 });
 
 SpecEnd
