@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// **THIS CURRENTLY DOESN'T WORK SINCE SWIFT CAN'T HAVE PUBLIC EXTENSIONS**
 extension Dictionary {
 //    mutating func removeFirstObject<K, V: Equatable>(object: V) {
 //        removeObject(object, limit: 1)

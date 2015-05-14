@@ -10,7 +10,7 @@ import UIKit
 
 /// :note: Corner Radius is equal to ``frame.size.height / 2.0``.
 @IBDesignable
-class OPCircleButton: OPStyleConformingButton {
+public class OPCircleButton: OPStyleConformingButton {
     
     @IBInspectable var cornerRadius: CGFloat = 0 {
         didSet {
@@ -18,11 +18,11 @@ class OPCircleButton: OPStyleConformingButton {
         }
     }
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
     }
     
-    required init(coder aDecoder: NSCoder) {
+    public required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         // Since Interface Builder initializes this instance using a decoder, it essentially bypasses
@@ -36,11 +36,11 @@ class OPCircleButton: OPStyleConformingButton {
         }
     }
     
-    override func setImage(image: UIImage?, forState state: UIControlState) {
+    public override func setImage(image: UIImage?, forState state: UIControlState) {
         super.setImage(image?.imageWithRenderingMode(.AlwaysTemplate), forState: state)
     }
     
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         
         // Done here so it appears in both Interface Builder and at runtime.

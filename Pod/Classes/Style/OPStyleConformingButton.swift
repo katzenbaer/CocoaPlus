@@ -8,13 +8,13 @@
 
 import UIKit
 
-class OPStyleConformingButton: UIButton, OPStyleConforming {
-    var style: OPStyle = .Default {
+public class OPStyleConformingButton: UIButton, OPStyleConforming {
+    public var style: OPStyle = .Default {
         didSet {
             didSetStyle(self.style)
         }
     }
-    @IBInspectable var styleIdentifier: String {
+    @IBInspectable public var styleIdentifier: String {
         get {
             return style.rawValue
         }
@@ -27,7 +27,7 @@ class OPStyleConformingButton: UIButton, OPStyleConforming {
         }
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         
         if self.style == .Default {
@@ -35,7 +35,7 @@ class OPStyleConformingButton: UIButton, OPStyleConforming {
         }
     }
     
-    func didSetStyle(style: OPStyle) {
+    public func didSetStyle(style: OPStyle) {
         let style = OPStyleClass.Button(style)
         self.backgroundColor = style.backgroundColor
         self.contentEdgeInsets = style.contentEdgeInsets

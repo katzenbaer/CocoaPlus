@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// **THIS CURRENTLY DOESN'T WORK SINCE SWIFT CAN'T HAVE PUBLIC EXTENSIONS**
 extension Array {
     mutating func removeObject<U: Equatable>(object: U) {
         var index: Int?

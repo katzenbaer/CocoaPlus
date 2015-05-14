@@ -8,6 +8,6 @@
 
 import Foundation
 
-func ==(lhs: UIEdgeInsets, rhs: UIEdgeInsets) -> Bool {
+public func ==(lhs: UIEdgeInsets, rhs: UIEdgeInsets) -> Bool {
     return UIEdgeInsetsEqualToEdgeInsets(lhs, rhs)
 }

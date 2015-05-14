@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OPColorComponents: Equatable {
+public class OPColorComponents: Equatable {
     var red: CGFloat = 0.0
     var green: CGFloat = 0.0
     var blue: CGFloat = 0.0
@@ -23,7 +23,7 @@ class OPColorComponents: Equatable {
     }
 }
 
-func ==(lhs: OPColorComponents, rhs: OPColorComponents) -> Bool {
+public func ==(lhs: OPColorComponents, rhs: OPColorComponents) -> Bool {
     if lhs.red != rhs.red {
         return false
     } else if lhs.green != rhs.green {

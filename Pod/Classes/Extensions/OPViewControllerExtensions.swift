@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// **THIS CURRENTLY DOESN'T WORK SINCE SWIFT CAN'T HAVE PUBLIC EXTENSIONS**
 extension UIViewController {
     enum UIViewControllerEmbedType {
         case NavigationController
