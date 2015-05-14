@@ -8,15 +8,15 @@
 
 import Foundation
 
-func oprint<T>(message: T, file: String = __FILE__, function: String = __FUNCTION__, line: Int = __LINE__) {
+public func oprint<T>(message: T, file: String = __FILE__, function: String = __FUNCTION__, line: Int = __LINE__) {
     _olog(print, file, function, line, message)
 }
 
-func oprintln<T>(message: T, file: String = __FILE__, function: String = __FUNCTION__, line: Int = __LINE__) {
+public func oprintln<T>(message: T, file: String = __FILE__, function: String = __FUNCTION__, line: Int = __LINE__) {
     _olog(println, file, function, line, message)
 }
 
-func ofatalError<T>(message: T, file: String = __FILE__, function: String = __FUNCTION__, line: Int = __LINE__) {
+public func ofatalError<T>(message: T, file: String = __FILE__, function: String = __FUNCTION__, line: Int = __LINE__) {
     _olog({
         string in
         fatalError(string)
