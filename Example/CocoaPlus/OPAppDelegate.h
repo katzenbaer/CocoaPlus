@@ -3,7 +3,7 @@
 //  CocoaPlus
 //
 //  Created by CocoaPods on 05/09/2015.
-//  Copyright (c) 2014 tkatzenbaer. All rights reserved.
+//  Copyright (c) 2015 Terrence Katzenbaer (@tkatzenbaer). All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
