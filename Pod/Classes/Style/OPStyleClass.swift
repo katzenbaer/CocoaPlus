@@ -30,11 +30,7 @@ public class OPStyleSheet {
                 return 4.0
             }
             public class func titleColor(state: UIControlState) -> UIColor {
-                if state == .Highlighted {
-                    return UIColor.grayColor()
-                } else {
-                    return UIColor.blackColor()
-                }
+                return UIColor.blackColor()
             }
             public class var contentEdgeInsets: UIEdgeInsets {
                 return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)

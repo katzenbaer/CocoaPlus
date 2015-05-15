@@ -9,6 +9,11 @@
 import UIKit
 
 public class OPStyleConformingButton: UIButton, OPStyleConforming {
+    public override var highlighted: Bool {
+        didSet {
+            self.setNeedsDisplay()
+        }
+    }
     public var style: OPStyle = .Default {
         didSet {
             didSetStyle(self.style)
@@ -56,6 +61,16 @@ public class OPStyleConformingButton: UIButton, OPStyleConforming {
     
     public override func setImage(image: UIImage?, forState state: UIControlState) {
         super.setImage(image?.imageWithRenderingMode(.AlwaysTemplate), forState: state)
+    }
+    
+    public override func drawRect(rect: CGRect) {
+        super.drawRect(rect)
+        
+        if self.highlighted {
+            let context = UIGraphicsGetCurrentContext()
+            CGContextSetRGBFillColor(context, 0, 0, 0, 0.4)
+            CGContextFillRect(context, self.bounds)
+        }
     }
     
     override public func layoutSubviews() {
