@@ -31,6 +31,16 @@ public class OPStyleConformingButton: UIButton, OPStyleConforming {
             }
         }
     }
+    @IBInspectable public var adjustsTitleFontSizeToFitWidth: Bool = false {
+        didSet {
+            self.titleLabel!.adjustsFontSizeToFitWidth = adjustsTitleFontSizeToFitWidth
+            
+            if (adjustsTitleFontSizeToFitWidth) {
+                let currentFont = self.titleLabel!.font
+                self.titleLabel!.font = currentFont.fontWithSize(self.frame.size.width)
+            }
+        }
+    }
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
