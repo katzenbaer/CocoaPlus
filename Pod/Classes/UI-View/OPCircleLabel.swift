@@ -1,6 +1,6 @@
 //
 //  OPCircleLabel.swift
-//  Pods
+//  CocoaPlus
 //
 //  Created by Terrence Katzenbaer on 5/14/15.
 //  Copyright (c) 2015 Terrence Katzenbaer (@tkatzenbaer). All rights reserved.
@@ -13,6 +13,6 @@ public class OPCircleLabel: OPRoundLabel {
     public override func layoutSubviews() {
         super.layoutSubviews()
         
-        self.layer.cornerRadius = self.frame.size.height / 2.0
+        self.cornerRadius = self.frame.size.height / 2.0
     }
 }

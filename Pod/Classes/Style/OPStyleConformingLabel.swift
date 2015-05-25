@@ -1,6 +1,6 @@
 //
 //  OPStyleConformingLabel.swift
-//  Pods
+//  CocoaPlus
 //
 //  Created by Terrence Katzenbaer on 5/14/15.
 //  Copyright (c) 2015 Terrence Katzenbaer (@tkatzenbaer). All rights reserved.
@@ -9,7 +9,7 @@
 import UIKit
 
 public class OPStyleConformingLabel: UILabel, OPStyleConforming {
-    public var style: OPStyle = .Default {
+    public var style: OPStyle = .Normal {
         didSet {
             didSetStyle(self.style)
         }
@@ -45,7 +45,25 @@ public class OPStyleConformingLabel: UILabel, OPStyleConforming {
         }
     }
     
-    public func didSetStyle(style: OPStyle) {
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        didSetStyle(self.style)
+    }
+    
+    public required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        didSetStyle(self.style)
+    }
+    
+    public override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        
+        didSetStyle(self.style)
+    }
+    
+    internal func didSetStyle(style: OPStyle) {
         let style = OPStyleSheet.LabelWithStyle(style)
         self.backgroundColor = style.backgroundColor
         self.contentEdgeInsets = style.contentEdgeInsets
@@ -58,10 +76,6 @@ public class OPStyleConformingLabel: UILabel, OPStyleConforming {
     
     override public func layoutSubviews() {
         super.layoutSubviews()
-        
-        if self.style == .Default {
-            self.style = .Normal
-        }
         
         if self.dirtyIntrinsicSize {
             self.dirtyIntrinsicSize = false

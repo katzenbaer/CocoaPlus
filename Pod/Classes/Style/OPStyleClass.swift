@@ -1,6 +1,6 @@
 //
 //  OPStyleClass.swift
-//  Pods
+//  CocoaPlus
 //
 //  Created by Terrence Katzenbaer on 5/9/15.
 //  Copyright (c) 2015 Terrence Katzenbaer (@tkatzenbaer). All rights reserved.
@@ -13,7 +13,7 @@ public class OPStyleSheet {
     // MARK: - Buttons
     public class func ButtonWithStyle(style: OPStyle) -> Button.Normal.Type {
         switch style {
-        case .Normal, .Default:
+        case .Normal:
             return Button.Normal.self
         case .Primary:
             return Button.Primary.self
@@ -74,7 +74,7 @@ public class OPStyleSheet {
     // MARK: - Label
     public class func LabelWithStyle(style: OPStyle) -> Label.Normal.Type {
         switch style {
-        case .Normal, .Default:
+        case .Normal:
             return Label.Normal.self
         case .Primary:
             return Label.Primary.self

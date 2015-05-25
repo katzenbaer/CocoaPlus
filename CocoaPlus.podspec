@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.license          = 'MIT'
   s.author           = { "tkatzenbaer" => "terrence@katzenbaer.me" }
   s.source           = { :git => "https://github.com/katzenbaer/CocoaPlus.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://twitter.com/tkatzenbaer'
 
   s.platform     = :ios, '8.0'
   s.requires_arc = true
@@ -33,6 +33,6 @@ Pod::Spec.new do |s|
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

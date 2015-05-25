@@ -1,6 +1,6 @@
 //
 //  OPStyleConformingButton.swift
-//  Pods
+//  CocoaPlus
 //
 //  Created by Terrence Katzenbaer on 5/9/15.
 //  Copyright (c) 2015 Terrence Katzenbaer (@tkatzenbaer). All rights reserved.
@@ -14,7 +14,7 @@ public class OPStyleConformingButton: UIButton, OPStyleConforming {
             self.setNeedsDisplay()
         }
     }
-    public var style: OPStyle = .Default {
+    public var style: OPStyle = .Normal {
         didSet {
             didSetStyle(self.style)
         }
@@ -44,11 +44,14 @@ public class OPStyleConformingButton: UIButton, OPStyleConforming {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        didSetStyle(self.style)
     }
     
     public required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
+        didSetStyle(self.style)
         // Since Interface Builder initializes this instance using a decoder, it essentially bypasses
         // the ``setImage:forState:`` function, so this is a hack is to rectify the image's
         // ``renderingMode``.
@@ -60,7 +63,13 @@ public class OPStyleConformingButton: UIButton, OPStyleConforming {
         }
     }
     
-    public func didSetStyle(style: OPStyle) {
+    public override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        
+        didSetStyle(self.style)
+    }
+    
+    internal func didSetStyle(style: OPStyle) {
         let style = OPStyleSheet.ButtonWithStyle(style)
         self.backgroundColor = style.backgroundColor
         self.contentEdgeInsets = style.contentEdgeInsets
@@ -80,14 +89,6 @@ public class OPStyleConformingButton: UIButton, OPStyleConforming {
             let context = UIGraphicsGetCurrentContext()
             CGContextSetRGBFillColor(context, 0, 0, 0, 0.4)
             CGContextFillRect(context, self.bounds)
-        }
-    }
-    
-    override public func layoutSubviews() {
-        super.layoutSubviews()
-        
-        if self.style == .Default {
-            self.style = .Normal
         }
     }
 }
