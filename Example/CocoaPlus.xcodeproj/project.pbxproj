@@ -23,6 +23,13 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		CD1A8A451B17BAE400E7D225 /* OPArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1A8A3F1B17BAE400E7D225 /* OPArrayExtensions.swift */; };
+		CD1A8A461B17BAE400E7D225 /* OPDictionaryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1A8A401B17BAE400E7D225 /* OPDictionaryExtensions.swift */; };
+		CD1A8A471B17BAE400E7D225 /* OPEdgeInsetExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1A8A411B17BAE400E7D225 /* OPEdgeInsetExtensions.swift */; };
+		CD1A8A481B17BAE400E7D225 /* OPLanguageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1A8A421B17BAE400E7D225 /* OPLanguageExtensions.swift */; };
+		CD1A8A491B17BAE400E7D225 /* OPViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1A8A431B17BAE400E7D225 /* OPViewControllerExtensions.swift */; };
+		CD1A8A4A1B17BAE400E7D225 /* OPViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1A8A441B17BAE400E7D225 /* OPViewExtensions.swift */; };
+		CDE6CA541B17AE89001D9EB7 /* OPLanguageExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE6CA531B17AE89001D9EB7 /* OPLanguageExtensionsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +69,14 @@
 		A16F70FCAA6C39E5B1CEAAC1 /* Pods-CocoaPlus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoaPlus.release.xcconfig"; path = "Pods/Target Support Files/Pods-CocoaPlus/Pods-CocoaPlus.release.xcconfig"; sourceTree = "<group>"; };
 		B99F8579A0FEDBF04E1BF852 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C264B668A3F385608350D043 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		CD1A8A3F1B17BAE400E7D225 /* OPArrayExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPArrayExtensions.swift; sourceTree = "<group>"; };
+		CD1A8A401B17BAE400E7D225 /* OPDictionaryExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPDictionaryExtensions.swift; sourceTree = "<group>"; };
+		CD1A8A411B17BAE400E7D225 /* OPEdgeInsetExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPEdgeInsetExtensions.swift; sourceTree = "<group>"; };
+		CD1A8A421B17BAE400E7D225 /* OPLanguageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPLanguageExtensions.swift; sourceTree = "<group>"; };
+		CD1A8A431B17BAE400E7D225 /* OPViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPViewControllerExtensions.swift; sourceTree = "<group>"; };
+		CD1A8A441B17BAE400E7D225 /* OPViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPViewExtensions.swift; sourceTree = "<group>"; };
+		CDE6CA521B17AE89001D9EB7 /* Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Bridging-Header.h"; sourceTree = "<group>"; };
+		CDE6CA531B17AE89001D9EB7 /* OPLanguageExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPLanguageExtensionsTests.swift; sourceTree = "<group>"; };
 		D3A7DF32061617C44EB79D12 /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5E8605FD650084C0A04DD29 /* Pods-CocoaPlus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoaPlus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CocoaPlus/Pods-CocoaPlus.debug.xcconfig"; sourceTree = "<group>"; };
 		E6F4ED9236C79F55544C4E99 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -155,8 +170,11 @@
 		6003F5B5195388D20070C39A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				CD1A8A3E1B17BAE400E7D225 /* Extensions */,
+				CDE6CA531B17AE89001D9EB7 /* OPLanguageExtensionsTests.swift */,
 				6003F5BB195388D20070C39A /* Tests.m */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
+				CDE6CA521B17AE89001D9EB7 /* Tests-Bridging-Header.h */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -179,6 +197,20 @@
 				C264B668A3F385608350D043 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		CD1A8A3E1B17BAE400E7D225 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CD1A8A3F1B17BAE400E7D225 /* OPArrayExtensions.swift */,
+				CD1A8A401B17BAE400E7D225 /* OPDictionaryExtensions.swift */,
+				CD1A8A411B17BAE400E7D225 /* OPEdgeInsetExtensions.swift */,
+				CD1A8A421B17BAE400E7D225 /* OPLanguageExtensions.swift */,
+				CD1A8A431B17BAE400E7D225 /* OPViewControllerExtensions.swift */,
+				CD1A8A441B17BAE400E7D225 /* OPViewExtensions.swift */,
+			);
+			name = Extensions;
+			path = ../../Pod/Classes/Extensions;
 			sourceTree = "<group>";
 		};
 		D82AAC4A8D9C21D587320BA1 /* Pods */ = {
@@ -399,7 +431,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD1A8A481B17BAE400E7D225 /* OPLanguageExtensions.swift in Sources */,
+				CD1A8A461B17BAE400E7D225 /* OPDictionaryExtensions.swift in Sources */,
+				CDE6CA541B17AE89001D9EB7 /* OPLanguageExtensionsTests.swift in Sources */,
+				CD1A8A4A1B17BAE400E7D225 /* OPViewExtensions.swift in Sources */,
+				CD1A8A471B17BAE400E7D225 /* OPEdgeInsetExtensions.swift in Sources */,
 				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+				CD1A8A491B17BAE400E7D225 /* OPViewControllerExtensions.swift in Sources */,
+				CD1A8A451B17BAE400E7D225 /* OPArrayExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,7 +512,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -506,7 +545,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -548,6 +587,7 @@
 			baseConfigurationReference = B99F8579A0FEDBF04E1BF852 /* Pods-Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CocoaPlus.app/CocoaPlus";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -560,7 +600,10 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/Tests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -571,6 +614,7 @@
 			baseConfigurationReference = E6F4ED9236C79F55544C4E99 /* Pods-Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CocoaPlus.app/CocoaPlus";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -579,7 +623,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/Tests-Bridging-Header.h";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};

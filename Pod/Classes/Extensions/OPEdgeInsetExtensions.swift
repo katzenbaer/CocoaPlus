@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Terrence Katzenbaer (@tkatzenbaer). All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public func ==(lhs: UIEdgeInsets, rhs: UIEdgeInsets) -> Bool {
     return UIEdgeInsetsEqualToEdgeInsets(lhs, rhs)

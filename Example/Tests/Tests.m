@@ -11,7 +11,7 @@
 SpecBegin(OPCircleButtonViewController)
 
 it(@"loading view controller from storyboard", ^{
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"CircleButton"];
     expect(vc.view).willNot.beNil();
     

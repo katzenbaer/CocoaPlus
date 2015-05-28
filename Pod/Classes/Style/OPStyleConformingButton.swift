@@ -14,11 +14,13 @@ public class OPStyleConformingButton: UIButton, OPStyleConforming {
             self.setNeedsDisplay()
         }
     }
+    
     public var style: OPStyle = .Normal {
         didSet {
             didSetStyle(self.style)
         }
     }
+    
     @IBInspectable public var styleIdentifier: String {
         get {
             return style.rawValue
@@ -31,6 +33,7 @@ public class OPStyleConformingButton: UIButton, OPStyleConforming {
             }
         }
     }
+
     @IBInspectable public var adjustsTitleFontSizeToFitWidth: Bool = false {
         didSet {
             self.titleLabel!.adjustsFontSizeToFitWidth = adjustsTitleFontSizeToFitWidth
@@ -69,15 +72,6 @@ public class OPStyleConformingButton: UIButton, OPStyleConforming {
         didSetStyle(self.style)
     }
     
-    internal func didSetStyle(style: OPStyle) {
-        let style = OPStyleSheet.ButtonWithStyle(style)
-        self.backgroundColor = style.backgroundColor
-        self.contentEdgeInsets = style.contentEdgeInsets
-        self.imageView!.tintColor = style.ImageView.tintColor
-        self.setTitleColor(style.titleColor(.Normal), forState: .Normal)
-        self.setTitleColor(style.titleColor(.Highlighted), forState: .Highlighted)
-    }
-    
     public override func setImage(image: UIImage?, forState state: UIControlState) {
         super.setImage(image?.imageWithRenderingMode(.AlwaysTemplate), forState: state)
     }
@@ -90,5 +84,14 @@ public class OPStyleConformingButton: UIButton, OPStyleConforming {
             CGContextSetRGBFillColor(context, 0, 0, 0, 0.4)
             CGContextFillRect(context, self.bounds)
         }
+    }
+    
+    internal func didSetStyle(style: OPStyle) {
+        let style = OPStyleSheet.ButtonWithStyle(style)
+        self.backgroundColor = style.backgroundColor
+        self.contentEdgeInsets = style.contentEdgeInsets
+        self.imageView!.tintColor = style.ImageView.tintColor
+        self.setTitleColor(style.titleColor(.Normal), forState: .Normal)
+        self.setTitleColor(style.titleColor(.Highlighted), forState: .Highlighted)
     }
 }

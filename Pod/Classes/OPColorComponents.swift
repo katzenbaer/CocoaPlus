@@ -9,17 +9,15 @@
 import UIKit
 
 public class OPColorComponents: Equatable {
-    var red: CGFloat = 0.0
-    var green: CGFloat = 0.0
-    var blue: CGFloat = 0.0
-    var alpha: CGFloat = 0.0
+    public var red: CGFloat = 0.0
+    public var green: CGFloat = 0.0
+    public var blue: CGFloat = 0.0
+    public var alpha: CGFloat = 0.0
     
-    class func componentsOfColor(color: UIColor) -> OPColorComponents {
-        let components = OPColorComponents()
-        
-        color.getRed(&components.red, green: &components.green, blue: &components.blue, alpha: &components.alpha)
-        
-        return components
+    public init?(color: UIColor) {
+        if !color.getRed(&self.red, green: &self.green, blue: &self.blue, alpha: &self.alpha) {
+            return nil
+        }
     }
 }
 
